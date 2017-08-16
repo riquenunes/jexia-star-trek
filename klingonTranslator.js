@@ -6,7 +6,7 @@ module.exports = {
         const regex = /(a|b|ch|d|e|gh|h|i|j|l|m|n|o|p|q|r|s|t|u|v|w|y|’|\s|\d)+/ig
         return regex.test(text)
     },
-    getKinglonCharHex(token) {
+    getKlingonCharHex(token) {
         if (!isNaN(token)) {
             return 0xF8F + parseInt(token)
         } else if (token === ' ') {
