@@ -1,0 +1,23 @@
+{
+  "name": "jexia-star-trek",
+  "version": "1.0.0",
+  "description": "English to Klingon name translator",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules/mocha/bin/mocha tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/riquenunes/jexia-star-trek.git"
+  },
+  "author": "Henrique Nunes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/riquenunes/jexia-star-trek/issues"
+  },
+  "homepage": "https://github.com/riquenunes/jexia-star-trek#readme",
+  "devDependencies": {
+    "chai": "^4.1.1",
+    "mocha": "^3.5.0"
+  }
+}
