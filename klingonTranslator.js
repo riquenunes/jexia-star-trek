@@ -1,4 +1,4 @@
-const klingonAlphabet =  ['a','b','ch','d','e','gh','h','i','j','l','m','n','ng','o','p','q','q','r','s','t','tlh','u','v','w','y','’']
+const klingonAlphabet =  require('./klingonAlphabet')
 const klingonAlphabetRegex = new RegExp(`(${klingonAlphabet.join('|')})+`, 'ig')
 
 module.exports = {
