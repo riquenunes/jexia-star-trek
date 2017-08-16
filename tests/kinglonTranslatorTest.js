@@ -4,7 +4,11 @@ const expect = chai.expect
 
 describe('kinglonTranslator', () => {
     it('isTextTranslatable should return false if an untranslatable text is passed', () => {
-        expect(kinglonTranslator.isTextTranslatable('')).to.equal(false)
+        expect(kinglonTranslator.isTextTranslatable('kzc')).to.equal(false)
+    })
+
+    it('isTextTranslatable should return true if \'Uhura\' is passed', () => {
+        expect(kinglonTranslator.isTextTranslatable('Uhura')).to.equal(true)
     })
 
     it('getKinglonCharHex should return 0xF8E5 if \'u\' is passed', () => {
