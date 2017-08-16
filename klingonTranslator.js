@@ -1,10 +1,10 @@
 const klingonAlphabet =  ['a','b','ch','d','e','gh','h','i','j','l','m','n','ng','o','p','q','q','r','s','t','tlh','u','v','w','y','’']
+const klingonAlphabetRegex = new RegExp(`(${klingonAlphabet.join('|')})+`, 'ig')
 
 module.exports = {
     // checks if the input string contains only characters of the pIqaD​ alphabet
     isTextTranslatable(text) {
-        const regex = /(a|b|ch|d|e|gh|h|i|j|l|m|n|o|p|q|r|s|t|u|v|w|y|’|\s|\d)+/ig
-        return regex.test(text)
+        return klingonAlphabetRegex.test(text)
     },
     getKlingonCharHex(token) {
         if (!isNaN(token)) {
