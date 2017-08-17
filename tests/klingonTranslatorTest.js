@@ -26,4 +26,12 @@ describe('klingonTranslator', () => {
     it('getklingonCharHex should return 0xF8D0 if \'a\' is passed', () => {
         expect(klingonTranslator.getKlingonCharHex('a')).to.equal(0xF8D0)
     })
+
+    it('translateText(\'Uhura\') should return \'0xF8E5 0xF8D6 0xF8E5 0xF8E1 0xF8D0\'', () => {
+        expect(klingonTranslator.translateText('Uhura')).to.equal('0xF8E5 0xF8D6 0xF8E5 0xF8E1 0xF8D0')
+    })
+
+    it('translateText(\'Uhura Nunes\') should return \'0xF8E5 0xF8D6 0xF8E5 0xF8E1 0xF8D0 0x0020 0xF8DB 0xF8E5 0xF8DB 0xF8D4 0xF8E2\'', () => {
+        expect(klingonTranslator.translateText('Uhura')).to.equal('0xF8E5 0xF8D6 0xF8E5 0xF8E1 0xF8D0 0x0020 0xF8DB 0xF8E5 0xF8DB 0xF8D4 0xF8E2')
+    })
 })

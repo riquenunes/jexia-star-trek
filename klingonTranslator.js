@@ -1,5 +1,6 @@
 const klingonAlphabet =  require('./klingonAlphabet')
 const klingonAlphabetRegex = new RegExp(`(${klingonAlphabet.join('|')})+`, 'ig')
+const textParser = require('./textParser')
 
 module.exports = {
     // checks if the input string contains only characters of the pIqaD​ alphabet
@@ -18,5 +19,8 @@ module.exports = {
                 return 0xF8D0 + tokenIndex
             }
         }
+    },
+    translateText(text) {
+        return ''
     }
 }
