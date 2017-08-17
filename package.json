@@ -4,6 +4,7 @@
   "description": "English to Klingon name translator",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "node_modules/mocha/bin/mocha tests"
   },
   "repository": {
