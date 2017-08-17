@@ -21,6 +21,19 @@ module.exports = {
         }
     },
     translateText(text) {
-        return ''
+        let translatedText = ''
+        const words = text.trim().split(' ')
+
+        words.forEach((word, index) => {
+            if (index > 0) {
+                translatedText += ' 0x0020'
+            }
+
+            textParser.getTokenList(word).forEach(token => {
+                translatedText += ' 0x' + this.getKlingonCharHex(token).toString(16).toUpperCase()
+            })
+        })
+
+        return translatedText.trim()
     }
 }
