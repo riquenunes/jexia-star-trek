@@ -21,10 +21,15 @@ $ npm start %NAME%
 
 ### About the code
 **index.js** - application entry point. It gets the command line args, translates and searchs for a character in stapi
+
 **klingonAlphabet.js** - an simple module with an array of Latin letters that represent the Klingon Alphabet and a Regex that's able to match every character of pIqaD
+
 **klingonTranslator.js** - where the magic happens!
+
 **stapi.js** - module responsible for communicating with stapi
+
 **textParser.js** - this module contains a function that takes a string and returns an array of Klingon characters (I call them "tokens" throughout the code)
+
 **tests** - contains all the application tests
 
 I also left some comments explaining some parts of the actual code. Feel free to check it out!
