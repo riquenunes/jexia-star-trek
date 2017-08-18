@@ -9,7 +9,7 @@ module.exports = {
   },
   getKlingonCharHex(token) {
     if (!isNaN(token)) {
-      return 0xF8F + parseInt(token)
+      return 0xF8F0 + parseInt(token)
     } else {
       const tokenIndex = klingonAlphabet.indexOf(token)
 
