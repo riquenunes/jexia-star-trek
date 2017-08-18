@@ -5,7 +5,7 @@ const textParser = require('./textParser')
 module.exports = {
   // checks if the input string contains only characters of the pIqaD alphabet
   isTextTranslatable(text) {
-    const testText = text.toLowerCase().replace(' ', '')
+    const testText = text.replace(' ', '')
     const matches = testText.match(klingonAlphabetRegex)
 
     return !!matches && matches.join('').length === testText.length
