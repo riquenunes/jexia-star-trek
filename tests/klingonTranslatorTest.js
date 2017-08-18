@@ -29,6 +29,18 @@ describe('klingonTranslator', () => {
     it('should return 0xF8D0 if \'a\' is passed', () => {
       expect(klingonTranslator.getKlingonCharHex('a')).to.equal(0xF8D0)
     })
+
+    it('should return 0xF8F0 if \'0\' is passed', () => {
+      expect(klingonTranslator.getKlingonCharHex('0')).to.equal(0xF8F0)
+    })
+
+    it('should return 0xF8F5 if \'5\' is passed', () => {
+      expect(klingonTranslator.getKlingonCharHex('5')).to.equal(0xF8F5)
+    })
+
+    it('should return 0xF8F9 if \'9\' is passed', () => {
+      expect(klingonTranslator.getKlingonCharHex('9')).to.equal(0xF8F9)
+    })
   })
 
   describe('#translateText()', () => {
