@@ -1,11 +1,14 @@
-const klingonAlphabet = require('./klingonAlphabet')
-const klingonAlphabetRegex = new RegExp(`(${klingonAlphabet.join('|')})+`, 'ig')
+const klingonAlphabet = require('./klingonAlphabet').alphabet
+const klingonAlphabetRegex = require('./klingonAlphabet').regex
 const textParser = require('./textParser')
 
 module.exports = {
   // checks if the input string contains only characters of the pIqaD alphabet
   isTextTranslatable(text) {
-    return klingonAlphabetRegex.test(text)
+    const testText = text.toLowerCase().replace(' ', '')
+    const matches = testText.match(klingonAlphabetRegex)
+
+    return !!matches && matches.join('').length === testText.length
   },
   getKlingonCharHex(token) {
     if (!isNaN(token)) {
