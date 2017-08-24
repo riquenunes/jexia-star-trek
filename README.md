@@ -20,7 +20,7 @@ $ npm start %NAME%
 
 
 ### About the code
-**index.js** - application entry point. It gets the command line args, translates and searchs for a character in stapi
+**index.js** - application entry point. It gets the command line args, translates and searches for a character in stapi
 
 **klingonAlphabet.js** - an simple module with an array of Latin letters that represent the Klingon Alphabet and a Regex that's able to match every character of pIqaD
 
